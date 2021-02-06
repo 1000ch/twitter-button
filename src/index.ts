@@ -37,7 +37,7 @@ export class TwitterButton extends HTMLElement {
 
     iframe.width = `${this.width}px`;
     iframe.height = `${this.height}px`;
-    iframe.src = this.getInlineFrameSource();
+    iframe.src = this.inlineFrameSource;
   }
 
   attributeChangedCallback(attributeName: string, oldValue: string, newValue: string): void {
@@ -52,7 +52,7 @@ export class TwitterButton extends HTMLElement {
         iframe[attributeName] = `${newValue}px`;
         break;
       default:
-        iframe.src = this.getInlineFrameSource();
+        iframe.src = this.inlineFrameSource;
         break;
     }
   }
@@ -141,7 +141,7 @@ export class TwitterButton extends HTMLElement {
     }
   }
 
-  getInlineFrameSource(): string {
+  get inlineFrameSource(): string {
     const BASE_URL = 'https://platform.twitter.com/widgets';
     let src = '';
 
