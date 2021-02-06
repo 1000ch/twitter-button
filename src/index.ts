@@ -62,11 +62,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set width(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('width');
+    } else {
+      this.setAttribute('width', value);
     }
-
-    this.setAttribute('width', value);
   }
 
   get height(): string | null {
@@ -74,11 +74,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set height(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('height');
+    } else {
+      this.setAttribute('height', value);
     }
-
-    this.setAttribute('height', value);
   }
 
   get type(): string | null {
@@ -86,11 +86,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set type(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('type');
+    } else {
+      this.setAttribute('type', value);
     }
-
-    this.setAttribute('type', value);
   }
 
   get hashtag(): string | null {
@@ -98,11 +98,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set hashtag(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('hashtag');
+    } else {
+      this.setAttribute('hashtag', value);
     }
-
-    this.setAttribute('hashtag', value);
   }
 
   get href(): string | null {
@@ -110,11 +110,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set href(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('href');
+    } else {
+      this.setAttribute('href', value);
     }
-
-    this.setAttribute('href', value);
   }
 
   get text(): string | null {
@@ -122,11 +122,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set text(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('text');
+    } else {
+      this.setAttribute('text', value);
     }
-
-    this.setAttribute('text', value);
   }
 
   get user(): string | null {
@@ -134,11 +134,11 @@ export class TwitterButton extends HTMLElement {
   }
 
   set user(value: string | null) {
-    if (!value) {
-      return;
+    if (value === null || value === undefined) {
+      this.removeAttribute('user');
+    } else {
+      this.setAttribute('user', value);
     }
-
-    this.setAttribute('user', value);
   }
 
   getInlineFrameSource(): string {
