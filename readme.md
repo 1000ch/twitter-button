@@ -1,4 +1,4 @@
-# twitter-button [![devDependency Status](https://david-dm.org/1000ch/twitter-button/dev-status.svg)](https://david-dm.org/1000ch/twitter-button?type=dev)
+# twitter-button ![GitHub Actions Status](https://github.com/1000ch/twitter-button/workflows/test/badge.svg?branch=master) [![devDependency Status](https://david-dm.org/1000ch/twitter-button/dev-status.svg)](https://david-dm.org/1000ch/twitter-button?type=dev)
 
 Twitter button as Web Components.
 
