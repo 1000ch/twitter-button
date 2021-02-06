@@ -142,20 +142,21 @@ export class TwitterButton extends HTMLElement {
   }
 
   getInlineFrameSource(): string {
+    const BASE_URL = 'https://platform.twitter.com/widgets';
     let src = '';
 
     switch (this.type) {
       case 'follow':
-        src = `https://platform.twitter.com/widgets/follow_button.html?screen_name=${this.user}`;
+        src = `${BASE_URL}/follow_button.html?screen_name=${this.user}`;
         break;
       case 'share':
-        src = `https://platform.twitter.com/widgets/tweet_button.html?url=${this.href}&via=${this.user}&text=${this.text}`;
+        src = `${BASE_URL}/tweet_button.html?url=${this.href}&via=${this.user}&text=${this.text}`;
         break;
       case 'hashtag':
-        src = `https://platform.twitter.com/widgets/tweet_button.html?text=${this.text}&button_hashtag=${this.hashtag}&type=hashtag`;
+        src = `${BASE_URL}/tweet_button.html?text=${this.text}&button_hashtag=${this.hashtag}&type=hashtag`;
         break;
       case 'mention':
-        src = `https://platform.twitter.com/widgets/tweet_button.html?screen_name=${this.user}&type=mention`;
+        src = `${BASE_URL}/tweet_button.html?screen_name=${this.user}&type=mention`;
         break;
     }
 
