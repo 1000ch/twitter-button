@@ -11,10 +11,16 @@
     <script type="module">
       import { windowReady } from 'https://unpkg.com/html-ready';
       import XMarked from 'https://unpkg.com/x-marked';
-      import { TwitterButton } from 'https://unpkg.com/twitter-button';
+      import { TwitterFollowButton } from 'https://unpkg.com/twitter-button/dist/twitter-follow-button.js';
+      import { TwitterHashtagButton } from 'https://unpkg.com/twitter-button/dist/twitter-hashtag-button.js';
+      import { TwitterMentionButton } from 'https://unpkg.com/twitter-button/dist/twitter-mention-button.js';
+      import { TwitterShareButton } from 'https://unpkg.com/twitter-button/dist/twitter-share-button.js';
 
       customElements.define('x-marked', XMarked);
-      customElements.define('twitter-button', TwitterButton);
+      customElements.define('twitter-follow-button', TwitterFollowButton);
+      customElements.define('twitter-hashtag-button', TwitterHashtagButton);
+      customElements.define('twitter-mention-button', TwitterMentionButton);
+      customElements.define('twitter-share-button', TwitterShareButton);
 
       windowReady.then(() => {
         const xmarked = document.querySelector('x-marked');
@@ -53,31 +59,67 @@ Import and register scripts.
 
 ```html
 <script type="module">
-import { TwitterButton } from 'https://unpkg.com/twitter-button';
+import { TwitterFollowButton } from 'https://unpkg.com/twitter-button/dist/twitter-follow-button.js';
+import { TwitterHashtagButton } from 'https://unpkg.com/twitter-button/dist/twitter-hashtag-button.js';
+import { TwitterMentionButton } from 'https://unpkg.com/twitter-button/dist/twitter-mention-button.js';
+import { TwitterShareButton } from 'https://unpkg.com/twitter-button/dist/twitter-share-button.js';
 
-customElements.define('twitter-button', TwitterButton);
+customElements.define('twitter-follow-button', TwitterFollowButton);
+customElements.define('twitter-hashtag-button', TwitterHashtagButton);
+customElements.define('twitter-mention-button', TwitterMentionButton);
+customElements.define('twitter-share-button', TwitterShareButton);
 </script>
 ```
 
-Just put `<twitter-button>` element in your HTML.
+Just put `<twitter-follow-button>`, `<twitter-hashtag-button>`, `<twitter-mention-button>`, and `<twitter-share-button>` element in your HTML.
 
 ```html
-<twitter-button></twitter-button>
+<twitter-follow-button></twitter-follow-button>
+<twitter-hashtag-button></twitter-hashtag-button>
+<twitter-mention-button></twitter-mention-button>
+<twitter-share-button></twitter-share-button>
 ```
 
-- `type`: string, must be any one of **follow**, **share**, **hashtag** or **mention**
-- `width`: number, width of `twitter-button`
-- `height`: number, height of `twitter-button`
-- `user`: string, Twitter ID
+### `TwitterFollowButton`
+
+- `width`: number, width of `twitter-follow-button`
+- `user`: string, Twitter ID to follow
+- `size`: string, must be either `small` or `large`, default to `small`
+
+### `TwitterHashtagButton`
+
+- `width`: number, width of `twitter-hashtag-button`
 - `text`: string, text to share
 - `hashtag`: string, hashtag to attach
+- `size`: string, must be either `small` or `large`, default to `small`
+
+### `TwitterMentionButton`
+
+- `width`: number, width of `twitter-mention-button`
+- `user`: string, Twitter ID to mention
+- `size`: string, must be either `small` or `large`, default to `small`
+
+### `TwitterShareButton`
+
+- `width`: number, width of `twitter-share-button`
+- `url`: string, URL to share
+- `user`: string, Twitter ID
+- `text`: string, text to share
+- `size`: string, must be either `small` or `large`, default to `small`
 
 ## Demo
 
-<twitter-button type="follow" width="240" height="30" user="1000ch"></twitter-button>
-<twitter-button type="share" width="80" height="30" user="1000ch" href="https://github.com/1000ch/twitter-button" text="Twitter button as Web Components"></twitter-button>
-<twitter-button type="hashtag" width="160" height="30" text="Twitter button as Web Components" hashtag="webcomponents"></twitter-button>
-<twitter-button type="mention" width="120" height="30" user="1000ch"></twitter-button>
+<twitter-follow-button width="240" user="1000ch"></twitter-follow-button>
+<twitter-follow-button width="240" user="1000ch" size="large"></twitter-follow-button>
+
+<twitter-hashtag-button width="160" text="Twitter button as Web Components" hashtag="webcomponents"></twitter-hashtag-button>
+<twitter-hashtag-button width="160" text="Twitter button as Web Components" hashtag="webcomponents" size="large"></twitter-hashtag-button>
+
+<twitter-mention-button width="120" user="1000ch"></twitter-mention-button>
+<twitter-mention-button width="120" user="1000ch" size="large"></twitter-mention-button>
+
+<twitter-share-button width="80" user="1000ch" url="https://github.com/1000ch/twitter-button" text="Twitter button as Web Components"></twitter-share-button>
+<twitter-share-button width="80" user="1000ch" url="https://github.com/1000ch/twitter-button" text="Twitter button as Web Components" size="large"></twitter-share-button>
 
 ## License
 
