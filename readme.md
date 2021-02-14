@@ -41,20 +41,20 @@ Just put `<twitter-follow-button>`, `<twitter-hashtag-button>`, `<twitter-mentio
 
 - `width`: number, width of `twitter-follow-button`
 - `user`: string, Twitter ID to follow
-- `size`: string, must be either `small` or `large`, default to `small`
+- `size`: string, must be either `s` or `l`, default to `s`
 
 ### `TwitterHashtagButton`
 
 - `width`: number, width of `twitter-hashtag-button`
 - `text`: string, text to share
 - `hashtag`: string, hashtag to attach
-- `size`: string, must be either `small` or `large`, default to `small`
+- `size`: string, must be either `s` or `l`, default to `s`
 
 ### `TwitterMentionButton`
 
 - `width`: number, width of `twitter-mention-button`
 - `user`: string, Twitter ID to mention
-- `size`: string, must be either `small` or `large`, default to `small`
+- `size`: string, must be either `s` or `l`, default to `s`
 
 ### `TwitterShareButton`
 
@@ -62,7 +62,7 @@ Just put `<twitter-follow-button>`, `<twitter-hashtag-button>`, `<twitter-mentio
 - `url`: string, URL to share
 - `user`: string, Twitter ID
 - `text`: string, text to share
-- `size`: string, must be either `small` or `large`, default to `small`
+- `size`: string, must be either `s` or `l`, default to `s`
 
 ## License
 

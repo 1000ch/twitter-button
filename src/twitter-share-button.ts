@@ -68,7 +68,7 @@ export class TwitterShareButton extends HTMLElement {
   }
 
   get defaultHeight(): string {
-    if (this.size !== 'large') {
+    if (this.size !== 'l') {
       return '20';
     } else {
       return '28';
